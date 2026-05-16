@@ -518,7 +518,8 @@ def check_call_history(self):
         if self.other_1.text() == "":
             self.other_1.setText(f"{result.get('Name', '')}")
         if self.other_2.text() == "":
-            self.other_2.setText(f"{result.get('Exch1', '')}")
+            SPCOnly = result.get('UserText', '')
+            self.other_2.setText(f"{SPCOnly[-2:]}")
 
 
 # --------RTC Stuff-----------
